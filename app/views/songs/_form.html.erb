@@ -1,0 +1,7 @@
+<%= form_for @song do |f| %>
+<%= f.label :name %>
+<%= f.text_field :name %>
+<%= f.label "Artist" %>
+<%= f.collection_select :artist_id, Artist.all, :id, :name, {:prompt => "Choose an artist"} %>
+<%= f.submit %>
+<% end %>
